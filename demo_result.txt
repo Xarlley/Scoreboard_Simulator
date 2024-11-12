@@ -1,0 +1,118 @@
+Cycle 1:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        Execute    0            1            None        
+L.D F2,45(R3)        Issue      None         None         None        
+MUL.D F0,F2,F4       Execute    0            3            None        
+SUB.D F8,F2,F6       Issue      None         None         None        
+DIV.D F10,F0,F6      Issue      None         None         None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 2:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        Execute    1            2            None        
+MUL.D F0,F2,F4       Execute    0            3            None        
+SUB.D F8,F2,F6       Issue      None         None         None        
+DIV.D F10,F0,F6      Issue      None         None         None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 3:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       Execute    0            3            None        
+SUB.D F8,F2,F6       Issue      None         None         None        
+DIV.D F10,F0,F6      Issue      None         None         None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 4:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       Execute    3            5            None        
+DIV.D F10,F0,F6      Issue      None         None         None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 5:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       Execute    3            5            None        
+DIV.D F10,F0,F6      Issue      None         None         None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 6:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      Execute    5            10           None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 7:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      Execute    5            10           None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 8:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      Execute    5            10           None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 9:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      Execute    5            10           None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 10:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      Execute    5            10           None        
+ADD.D F6,F8,F2       Issue      None         None         None        
+
+
+Cycle 11:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      WriteBack  5            10           10          
+ADD.D F6,F8,F2       Execute    10           11           None        
+
+
+Cycle 12:
+Instruction          Status     Exec Start   Exec End     Write Back  
+L.D F6,34(R2)        WriteBack  0            1            1           
+L.D F2,45(R3)        WriteBack  1            2            2           
+MUL.D F0,F2,F4       WriteBack  0            3            3           
+SUB.D F8,F2,F6       WriteBack  3            5            5           
+DIV.D F10,F0,F6      WriteBack  5            10           10          
+ADD.D F6,F8,F2       WriteBack  10           11           11
